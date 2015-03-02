@@ -1,10 +1,26 @@
 !!!
 %html
   %head
-    %meta{content: 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type'}/
+    %meta{content: 'text/html; charset=UTF-8', http_equiv: 'Content-Type'}/
     %title Entapp
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
   %body
-    = yield
+    .container
+      %ul.nav.nav-tabs
+        %li
+          = link_to 'Home', root_path
+        %li
+          = link_to 'About Us', home_about_path
+        %li
+          = link_to 'Contact', home_contact_path
+        %li
+          = link_to 'FAQ', home_faq_path
+        %li
+          = link_to 'Pricing', home_pricing_path
+        %li
+          = link_to 'Invoices', invoices_path
+        %li
+          = link_to 'Login', root_path
+      = yield
