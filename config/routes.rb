@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'home/index'
+
+  get 'home/about'
+
+  get 'home/contact'
+
+  get 'home/faq'
+
+  get 'home/pricing'
+
+  get 'home/features'
+
   resources :invoices
 
   root  to: 'invoices#index'
