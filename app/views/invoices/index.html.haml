@@ -1,22 +1,24 @@
 %p#notice= notice
-%h1 Listing Invoices
-%table
-  %thead
-    %tr
-      %th Date
-      %th Company
-      %th Tax
-      %th Salesperson
-      %th{:colspan => "3"}
-  %tbody
-    - @invoices.each do |invoice|
-      %tr
-        %td= invoice.date
-        %td= invoice.company
-        %td= invoice.tax
-        %td= invoice.salesperson
-        %td= link_to 'Show', invoice
-        %td= link_to 'Edit', edit_invoice_path(invoice)
-        %td= link_to 'Destroy', invoice, method: :delete, data: { confirm: 'Are you sure?' }
-%br/
-= link_to 'New Invoice', new_invoice_path
+%h1.page-header Listing Invoices
+.row
+  .col.col-sm-12
+    %table.table.table-hover.table-striped
+      %thead
+        %tr
+          %th Date
+          %th Company
+          %th Tax
+          %th Salesperson
+          %th{colspan: '3'}
+      %tbody
+        - @invoices.each do |invoice|
+          %tr
+            %td= invoice.date.strftime('%m/%d/%Y')
+            %td= invoice.company
+            %td= invoice.tax
+            %td= invoice.salesperson
+            %td= link_to 'Show', invoice, class: 'btn btn-block btn-default'
+            %td= link_to 'Edit', edit_invoice_path(invoice), class: 'btn btn-block btn-success'
+            %td= link_to 'Destroy', invoice, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-block btn-danger'
+    %br/
+    = link_to 'New Invoice', new_invoice_path
