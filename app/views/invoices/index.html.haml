@@ -1,12 +1,14 @@
+
+
+%p#notice= notice
+%h1.page-header Listing Invoices
+
 .row
   .pull-right
     = form_tag invoices_path, method: :get do
       = text_field_tag 'search[date_from]', @search.date_from
       = text_field_tag 'search[date_to]', @search.date_to
       = submit_tag 'Search', class: 'btn search-button'
-
-%p#notice= notice
-%h1.page-header Listing Invoices
 .row
   .col.col-sm-12
     %table.table.table-hover.table-striped

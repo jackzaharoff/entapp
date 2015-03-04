@@ -9,7 +9,7 @@ gem 'rails', '4.2.0'
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '3.3.3'
 gem 'haml-rails', '0.8.2'
-
+gem 'devise'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -47,6 +47,7 @@ group :development, :test do
   # Use sqlite3 as the database for Active Record
 
   gem 'sqlite3'
+  gem 'dotenv-rails'
 end
 
 group :production do
