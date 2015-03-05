@@ -29,9 +29,13 @@
             = link_to 'Sign in', new_user_session_path
           %li
             = link_to 'Sign up', new_user_registration_path
+      %br
+      .row
+        .col-sm-12
+        - flash.each do |key,value|
+          %div{class: "fade in alert alert-#{key}"}
+            = value
+            %a.close{'data-dismiss' => 'alert', href: '#', "aria-hidden" => 'true'}
+              &times;
 
-      %p.alert-info
-        = notice
-      %p.alert-danger
-        = alert
       = yield
