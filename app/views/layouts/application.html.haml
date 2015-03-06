@@ -35,7 +35,7 @@
         - flash.each do |key,value|
           %div{class: "fade in alert alert-#{key}"}
             = value
-            %a.close{'data-dismiss' => 'alert', href: '#', "aria-hidden" => 'true'}
+            %a.close{'data-dismiss' => 'alert', href: '#', 'aria-hidden' => 'true'}
               &times;
 
       = yield

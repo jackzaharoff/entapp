@@ -48,6 +48,13 @@ group :development, :test do
 
   gem 'sqlite3'
   gem 'dotenv-rails'
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'factory_girl'
+  gem 'valid_attribute'
+  gem 'shoulda-matchers'
+  gem 'pry-rails'
 end
 
 group :production do
